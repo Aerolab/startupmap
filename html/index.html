@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <script type="text/javascript" src="http://localhost:48626/takana.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>StartupMap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="appWrapper">
+            <header>
+                <a href="" id="toggle-nav">
+                    <i>
+                      <span class="top-left"></span>
+                      <span class="top-right"></span>
+                      <span class="middle"></span>
+                      <span class="bottom-left"></span>
+                      <span class="bottom-right"></span>
+                    </i>
+                </a>
+                <h1>StartupsMap</h1>
+            </header>
+	        <div id="sidebar">
+                <div class="searchBar">
+                    <input type="text" name="" placeholder="Search..." value="">
+                </div>
+                <div class="panel">
+    	        	<div id="categories">
+    		        	<ul>
+
+    		        	</ul>
+                        <a href="#" class="aboutUs"><i class="fa fa-info-circle"></i>About us</a>
+    		        </div>
+    		        <div id="list">
+                        <div class="items">
+
+                        </div>
+
+                        <div id="filters">
+                            <ul>
+                                <li><a href="#thumbs"><i class="fa fa-th-large"></i> Logotipos</a></li>
+                                <li><a href="#list" class="active"><i class="fa fa-align-left"></i> Listado</a></li>
+                                <li><a href="#"><i class="fa fa-tag"></i> Etiquetas</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> ECommerce</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Marketplace</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Mobile app</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Gaming</a></li>
+                            </ul>
+                        </div>
+    		        </div>
+                </div>
+		        
+	        </div>
+	        <div id="hugeMap">
+                <div id="userControl">
+                    
+                    <a href="#user">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle-o fa-stack-2x"></i>
+                          <i class="fa fa-user fa-stack-1x"></i>
+                        </span>
+                    </a>
+                     <a href="#newStartup">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle-o fa-stack-2x"></i>
+                          <i class="fa fa-plus fa-stack-1x"></i>
+                        </span>
+                    </a>
+
+                </div>
+	            <div id="map"></div>
+                
+	        </div>
+            <div id="userSidebar">
+                <div id="login">
+                    <form action="" method="post" accept-charset="utf-8">
+                        <p><a href="#" class="linkedin"><i class="fa fa-linkedin-square"></i>Connect with Linkedin</a></p>
+                        <hr>
+                        <p><input type="text" name="email" value="" placeholder="email@startupmap.la"></p>
+                        <p><input type="password" name="password" value="" placeholder="***********"></p>
+                        <p class="submit"><a href="#">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script id="itemsTemplate" type="x-tmpl-mustache">
+            <div data-category="{{id}}">
+                <div class="results">Resultados <span>{{amount}}</span></div>
+                <ul class="styleList">
+                {{#items}}
+                    <li><a href="#{{options.id}}">{{options.title}}</a></li>
+                {{/items}}
+                </ul>
+                <ul class="styleThumb">
+                {{#items}}
+                    <li><a href="#{{options.id}}"><img src="http://placehold.it/92x92" alt="{{options.title}}"></a></li>
+                {{/items}}
+                </ul>
+            </div>
+        </script>
+        <script id="startupTemplate" type="x-tmpl-mustache">
+            <div class="startupView" data-id="startup-{{options.id}}">
+                <a href="#closeStartup" class="close"><i class="fa fa-times"></i></a>
+                <div class="photoSlider">
+                    <img src="http://placehold.it/370x180">
+                </div>
+                <div class="info clearfix">
+                    <img src="http://placehold.it/80x80">
+                    <h2>{{options.title}}</h2>
+                    <h3>{{options.data.subtitle}}</h3>
+                </div>
+                <div class="location">
+                    <p><i class="fa fa-location-arrow"></i> {{options.data.address}}</p>
+                </div>
+                <div class="social">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="description">
+                    <p>{{options.data.description}}</p>
+                </div>
+            </div>
+        </script>
+
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+        <script src='js/leaflet.markercluster.js'></script>
+        <script src="js/leaflet.awesome-markers.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/mustache.js"></script>
+        
+        <script src="js/main.js"></script>
+        
+        <!-- <script src="js/snippets.js"></script> -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

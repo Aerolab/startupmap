@@ -1,0 +1,163 @@
+@import '_normalize';
+@import '_helpers';
+
+body {
+	min-width: 320px;
+}
+
+#appWrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+html {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+
+@import 'startupsmap-font.css';
+
+@import 'modalCountry';
+@import 'huge_map';
+@import 'sidebar';
+@import 'forms';
+@import 'map_style';
+@import 'error';
+
+@import '_responsive';
+
+// Map select
+#mapCountrySelector {
+	position: absolute;
+
+	& + .selectize-control {
+		position: absolute;
+		width: 70px;
+		cursor: pointer;
+		margin: -42px 0 0 260px;
+		z-index: 9000px;
+
+		&:after {
+			display: none!important;
+		}	
+
+		& .selectize-input {
+			& .selected {
+				& span {
+					display: none;
+				}
+			}
+		}
+
+		& .selectize-dropdown {
+			width: 180px!important;
+		}
+
+		.countryItem {
+			& i {
+				display: inline-block;
+				width: 19px;
+				height: 13px;
+				margin: 0 6px 0 0;
+				background: url(../images/flag-sprite.png) no-repeat;
+				background-position-x: left;
+			}
+
+			&.countryAR {
+				& i {
+					background-position-y: top;
+				}
+			}
+
+			&.countryUY {
+				& i {
+					background-position-y: -13px;
+				}
+			}
+
+			&.countryMX {
+				& i {
+					background-position-y: -26px;
+				}
+			}
+
+			&.countryBO {
+				& i {
+					background-position-y: -39px;
+				}
+			}
+
+			&.countryPE {
+				& i {
+					background-position-y: -52px;
+				}
+			}
+
+			&.countryCL {
+				& i {
+					background-position-y: -65px;
+				}
+			}
+
+			&.countryCO {
+				& i {
+					background-position-y: bottom;
+				}
+			}
+		}
+	}
+}

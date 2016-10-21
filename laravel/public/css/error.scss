@@ -1,0 +1,45 @@
+body#error {
+	margin: 0;
+	padding: 0;
+    background: #2496ef;
+    .wrokenMap {
+    	position: absolute;
+    	width: 518px;
+    	height: 350px;
+    	background: url(../images/error.jpg) bottom center no-repeat;
+    	color: #fff;
+
+    	top: 50%;
+    	margin-top: -175px;
+    	left: 50%;
+    	margin-left: -259px;
+
+    	h2 {
+    		font-size: 130px;
+			margin: 0;
+			line-height: 96px;
+			text-align: center;
+    	}
+    	h3 {
+    		text-align: center;
+			font-size: 36px;
+			text-transform: uppercase;
+			margin: 0;
+    	}
+    	p {
+    		text-align: center;
+    		padding-bottom: 40px;
+    		background: url(../images/error.png) bottom center no-repeat;
+    	}
+        a {
+            text-align: center;
+            display: block;
+            margin-top: 160px;
+            font-size: 32px;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

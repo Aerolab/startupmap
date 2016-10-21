@@ -1,0 +1,169 @@
+#hugeMap {
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transition: all 0.3s ease;
+
+	
+	#map {
+		transition: all 0.3s ease;
+		position: absolute !important;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		// z-index: 1;
+		
+	}
+}
+
+
+
+
+header {
+	position: absolute;
+	top: 10px;
+	// left: 500px;
+	left: 0;
+	z-index: 1000;
+	transition: all 0.3s ease;
+
+	h1 {
+		color: #2496ef;
+		display: block;
+		margin: 0;
+		margin-left: 50px;
+		font-size: 26px;
+		line-height: 48px;
+		width: 190px;
+		height: 48px;
+		text-indent: 3000px;
+		overflow: hidden;
+		background: url(../images/logo.png) center no-repeat;
+	}
+
+	#toggle-nav {
+		float: left;
+		position: relative;
+		z-index: 900;
+		width: 48px;
+		height: 48px;
+		outline: none;
+		display: block;
+		float: left;
+
+		i {
+			width: 18px;
+			height: 14px;
+			margin: 17px 14px;
+			position: relative;
+			display: block;
+
+			> span {
+				height: 2px;
+				background: #2496ef;
+				width: 50%;
+				position: absolute;
+				left: 0;
+				transition: transform linear .1s;
+				-webkit-transition: -webkit-transform linear .1s;
+				-moz-transition: -moz-transform linear .1s;
+
+				&.top-left {
+					@include transform-origin(0%, 0%);
+				}
+
+				&.top-right {
+					right: 0;
+					left: auto;
+					@include transform-origin(100%, 0%);
+				}
+
+				&.middle {
+					width: 100%;
+					top: 50%;
+					margin-top: -1px;
+				}
+				&.bottom-left {
+					top: auto;
+					bottom: 0;
+					@include transform-origin(0%, 0%);
+				}
+				&.bottom-right {
+					top: auto;
+					bottom: 0;
+					left: auto;
+					right: 0;
+					@include transform-origin(100%, 0%);
+				}
+			}
+		}
+		&.active i {
+			> span.top-left {
+				-webkit-transform: translate(2px, -1px) rotate(45deg) scaleX(1.25);
+				-moz-transform: translate(2px, -1px) rotate(45deg) scaleX(1.25);
+				transform: translate(2px, -1px) rotate(45deg) scaleX(1.25);
+			}
+			> span.top-right {
+				-webkit-transform: translate(-2px, -1px) rotate(-45deg) scaleX(1.25);
+				-moz-transform: translate(-2px, -1px) rotate(-45deg) scaleX(1.25);
+				transform: translate(-2px, -1px) rotate(-45deg) scaleX(1.25);
+			}
+			> span.middle {
+				-webkit-transform: scaleX(0);
+				-moz-transform: scaleX(0);
+				transform: scaleX(0);
+			}
+			> span.bottom-left {
+				-webkit-transform: translate(0px, 3px) rotate(-45deg) scaleX(1.25);
+				-moz-transform: translate(0px, 3px) rotate(-45deg) scaleX(1.25);
+				transform: translate(0px, 3px) rotate(-45deg) scaleX(1.25);
+			}
+			> span.bottom-right {
+				-webkit-transform: translate(0px, 3px) rotate(45deg) scaleX(1.25);
+				-moz-transform: translate(0px, 3px) rotate(45deg) scaleX(1.25);
+				transform: translate(0px, 3px) rotate(45deg) scaleX(1.25);
+			}
+		}
+	}
+}
+
+#share {
+	position: absolute;
+	top: 24px;
+	left: 340px;
+	padding-left: 12px;
+	z-index: 1;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+
+	.share {
+		vertical-align: top;
+		display: inline-block;
+		overflow: hidden;
+		height: 22px;
+		max-width: 150px;
+		margin-right: 20px;
+	}
+	.fb-share-button > span {
+		vertical-align: top !important;
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 32px;
+	right: 56px;
+	z-index: 100;
+	a {
+		display: block;
+		width: 118px;
+		height: 45px;
+		background: url(../images/aerolab.png) center no-repeat;
+		overflow: hidden;
+		text-indent: -999px;
+	}
+}

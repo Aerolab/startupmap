@@ -1,0 +1,103 @@
+// On tablets and smaller devices, the sidebar is a bit smaller.
+@media(max-width:767px) {
+	#sidebar {
+		left: -320px;
+		width: 320px;
+	}
+	#userSidebar {
+		right: -320px;
+		width: 320px;
+	}
+	#leftClose {
+		display: none;
+	}
+	#rightControl {
+		z-index: 9500;
+	}
+	#share {
+		top: auto;
+		bottom: 20px;
+		left: 0px;
+		padding-left: 12px;
+
+		.share {
+			display: block;
+		}
+	}
+
+	body.sidebar-open {
+		header {
+			left: 320px;
+		}
+		#share {
+			left: 320px;
+		}
+		#hugeMap {
+			left: 320px;
+		}
+		#rightControl {
+			right: -50px;
+		}
+	}
+
+	body.userSidebar-open {
+		#hugeMap {
+			right: 320px;
+		}
+		#rightControl {
+			right: 10px;
+		}
+	}
+
+	// Make the UI buttons a tiny bit bigger
+	#rightControl a i, #leftClose {
+		font-size: 42px;
+	}
+	#categories li a.openList {
+		padding-top: 13px;
+		padding-bottom: 12px;
+	}
+	#list .results {
+		font-size: 13px;
+		height: 56px;
+		line-height: 56px;
+	}
+	#list ul {
+		top: 56px;
+	}
+	#list ul.styleList li a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+// On smaller devices the sidebar takes the entire viewport
+@media(max-width:360px) {
+	#sidebar {
+		left: -100%;
+		width: 100%;
+	}
+	#userSidebar {
+		right: -100%;
+		width: 100%;
+	}
+	#leftClose {
+		display: block;
+		color: #ffffff;
+	}
+
+	body.sidebar-open {
+		header {
+			left: 100%;
+		}
+		#hugeMap {
+			left: 100%;
+		}
+	}
+
+	body.userSidebar-open {
+		#hugeMap {
+			right: 100%;
+		}
+	}
+}

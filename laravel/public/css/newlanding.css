@@ -1,0 +1,296 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: #999999;
+    background: #fafafa;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+	min-width: 100%;
+	min-height: 300px;
+	background: url(../images/landing/hero.jpg) center bottom no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	margin: 0;
+	height: 500px;
+	width: 645px;
+	margin: 0 auto;
+	background: url(../images/landing/map.png) center bottom no-repeat;
+}
+
+.newsletter {
+	color: #60b5f3;
+	background: #fff;
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: -60px;
+	padding: 30px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+input {
+	box-shadow: none;
+	outline: none;
+	padding: 10px 20px;
+	width: 100%;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #9fa3a2;
+	font-size: 16px;
+	border: 2px solid rgba(168, 168, 168, 0.5) !important;
+	background: #fafafa;
+}
+
+input:focus, textarea:focus {
+	border-color: #2496EF;
+	outline: none;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.col {
+	width: 50%;
+    height: 70px;
+	float: left;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+input.mce_inline_error {
+    border: 3px solid #D14F6E !important;
+}
+
+#mc-embedded-subscribe {
+	background: #60b5f3 !important;
+	color: #FFF !important;
+	border: none !important;
+	width: 336px !important;
+	margin-top: 20px !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+#mce-success-response {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+div.mce_inline_error {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,94 @@
+@mixin clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+body
+	padding-bottom: 70px
+
+footer
+	position: fixed
+	bottom: 0
+	left: 0
+	width: 100%
+	background: #efefef
+	padding: 15px 0
+	margin: 15px 0 0
+
+	p
+		margin: 6px 0 0
+
+.container
+	width: 1000px!important
+
+.page-header
+	padding: 20px 0
+	background: #efefef
+
+th.sorting-desc:after,
+th.sorting-asc:after
+	content: '\25BC'
+	position: absolute
+	border-radius: 1000px
+	padding: 4px
+	font-size: 9px
+	line-height: 1
+	margin: 1px 0 0 5px
+	color: #fff
+	background: #0066bb
+
+th.sorting-asc:after
+	content: '\25B2'
+
+
+.clearfix
+	@include clearfix
+
+.ajaxFileUpload
+	width: 49%
+	float: left
+	@include clearfix
+
+	& + .ajaxFileUpload
+		float: right
+
+	p
+		display: block
+		width: 100%
+		font-weight: bold
+		margin: 0 0 10px
+
+	.dropzone
+		width: 100%
+		border: 2px dashed #eee
+		margin: 0 0 15px
+		text-align: center
+		padding: 40px 0
+		height: 35px
+		background-size: contain
+		background-position: center center
+		background-repeat: no-repeat
+
+		.uploading
+			display: none
+
+		&.drag-over
+			border-color: #0066bb
+
+			i
+				color: #0066bb
+
+		&.uploading
+			.uploading
+				display: block
+				& + i
+					display: none
+
+	i
+		font-size: 35px
+		color: #ccc
+
+	input
+		display: block
+		margin: 0 auto

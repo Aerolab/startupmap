@@ -1,0 +1,20 @@
+Changelog
+
+**0.2**
+- Added support for multiple countries
+- Changed absolute URL for markers
+- Several Fixes
+
+SQL Changes
+- Cities migration
+
+- Startup Table
+ALTER TABLE `startups` CHANGE `country` `country_id` TEXT
+Country -> Country_id (Startups table)
+
+ALTER TABLE `countries` ADD `enabled` ENUM('y','n') NOT NULL DEFAULT 'y' ;
+Countries table: Add enabled (enum: y,n)
+
+- Other files fixes
+Vendor/Torann/GeoIP
+$maxmind = new Reader(app_path().'/database/maxmind/GeoLite2-Country.mmdb');

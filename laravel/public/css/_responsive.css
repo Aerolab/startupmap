@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  #sidebar {
+    left: -320px;
+    width: 320px; }
+
+  #userSidebar {
+    right: -320px;
+    width: 320px; } }
+
+/*# sourceMappingURL=_responsive.css.map */

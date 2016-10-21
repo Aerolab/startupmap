@@ -1,0 +1,66 @@
+{
+  "checksum": {
+    "previous": "e3e25c07ddcbf6ccad453a229087ad79e06af86ed80f8e5595905e91e9441dd1",
+    "current": "e3e25c07ddcbf6ccad453a229087ad79e06af86ed80f8e5595905e91e9441dd1"
+  },
+  "fonts": [
+    "fontcustom/fontcustom_e3e25c07ddcbf6ccad453a229087ad79.ttf",
+    "fontcustom/fontcustom_e3e25c07ddcbf6ccad453a229087ad79.svg",
+    "fontcustom/fontcustom_e3e25c07ddcbf6ccad453a229087ad79.woff",
+    "fontcustom/fontcustom_e3e25c07ddcbf6ccad453a229087ad79.eot"
+  ],
+  "glyphs": {
+    "accelerators": {
+      "codepoint": 61702,
+      "source": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons/accelerators.svg"
+    },
+    "consulting": {
+      "codepoint": 61703,
+      "source": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons/consulting.svg"
+    },
+    "coworking": {
+      "codepoint": 61704,
+      "source": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons/coworking.svg"
+    },
+    "incubators": {
+      "codepoint": 61705,
+      "source": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons/incubators.svg"
+    },
+    "list": {
+      "codepoint": 61706,
+      "source": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons/list.svg"
+    },
+    "startup": {
+      "codepoint": 61707,
+      "source": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons/startup.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons",
+      "vectors": "/Users/sbehrends/Documents/Proyectos/Aerolab/Startups Map/repo/util/cusotom-icons/icons"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "fontcustom",
+      "fonts": "fontcustom",
+      "preview": "fontcustom"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "fontcustom/fontcustom.css",
+    "fontcustom/fontcustom-preview.html"
+  ]
+}

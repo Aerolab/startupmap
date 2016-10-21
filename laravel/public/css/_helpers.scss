@@ -1,0 +1,118 @@
+*{box-sizing: border-box;}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@mixin transform-origin($a, $b) {
+    transform-origin: $a $b;
+    -webkit-transform-origin: $a $b;
+    -moz-transform-origin: $a $b;
+}
+
+.scrollable {
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+
+  // Inertial scrolling for touch devices (mostly useless here)
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    background: none;
+    width: 9px;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+  &::-webkit-scrollbar-track-piece {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.0);
+    background-clip: content-box;
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+  &::-webkit-resizer {
+    display: none;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: transparentize(#000000, 0.5);
+      background-clip: content-box;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+
+      &:hover {
+        background: transparentize(#000000, 0.4);
+        background-clip: content-box;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+    }
+  }
+
+}

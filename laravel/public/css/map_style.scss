@@ -1,0 +1,280 @@
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+	-webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+	-moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+	-o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+	transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+	}
+
+
+.marker-cluster-small div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4);
+	}
+
+.marker-cluster-medium div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4),
+				0px 0px 0px 36px rgba(36, 150, 239, 0.3),
+				0px 0px 0px 63px rgba(36, 150, 239, 0.2);
+	}
+
+.marker-cluster-large div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4),
+				0px 0px 0px 36px rgba(36, 150, 239, 0.3),
+				0px 0px 0px 63px rgba(36, 150, 239, 0.2),
+				0px 0px 0px 97px rgba(36, 150, 239, 0.1);
+	}
+
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	text-align: center;
+	border-radius: 15px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.marker-cluster span {
+	line-height: 30px;
+	}
+
+@keyframes bounce {  
+	0% {
+		bottom: 0;
+	}
+	50% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0;
+	}
+
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		bottom: 0;
+	}
+	50% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0;
+	}
+}
+
+@-webkit-keyframes shadow {
+	0% {
+		-webkit-transform: scale(1.1);
+	}
+	50% {
+		-webkit-transform: scale(0.4);
+	}
+	100% {
+		-webkit-transform: scale(1.1);
+	}
+}
+
+/*
+Author: L. Voogdt
+License: MIT
+Version: 1.0
+*/
+
+/* Marker setup */
+.marker {
+  // background: url('../images/markers.png') no-repeat 0 0;
+  width: 26px;
+  height: 44px;
+  position:absolute;
+  left:0;
+  top:0;
+  display: block;
+  text-align: center;
+
+  &.active {
+    // background: red;
+    .inner-marker {
+    	-webkit-animation: bounce 1s infinite;
+    	animation: bounce 1s;
+		.rocket-left {
+			bottom: 0;
+			left: 0;
+		}
+		.rocket-right {
+			bottom: 0;
+			right: 0;
+		}
+		
+	}
+	.rocket-shadow {
+		bottom: -7px;
+		left: 1px;
+		opacity: 0.3;
+		-webkit-animation: shadow 1s infinite;
+	}
+  }
+
+  .inner-marker {
+  	position: absolute;
+  	width: 27px;
+  	height: 44px;
+
+  	.content {
+  		background: url('../images/markers.png') no-repeat 0 0;
+	  	position: absolute;
+	  	width: 27px;
+	  	height: 44px;
+	  	z-index: 10;
+	  	i {
+			color: #fff;
+			display: inline-block;
+			font-size: 21px;
+			margin-top: -2px;
+			text-align: center;
+			// text-indent: -0.4px;
+		}
+	
+
+
+	}
+  }
+// MarkerColor[1] = 'blue';
+// MarkerColor[2] = 'pink';
+// MarkerColor[3] = 'red';
+// MarkerColor[4] = 'purple';
+// MarkerColor[5] = 'orange';
+  .rocket-left {
+  	background: url('../images/markers.png') no-repeat 0 -46px;
+	width: 9px;
+	height: 15px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: -5;
+	transition: all 0.8s linear;
+  }
+  .rocket-right {
+  	background: url('../images/markers.png') no-repeat -18px -46px;
+	width: 9px;
+	height: 15px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: -5;
+	transition: all 0.8s linear;
+  }
+  .rocket-shadow {
+  	background: url('../images/markers.png') no-repeat -1px -65px;
+	width: 25px;
+	height: 10px;
+	position: absolute;
+	bottom: -7px;
+	left: 1px;
+	opacity: 0;
+	z-index: -6;
+	transition: all 0.5s linear;
+	
+  }
+
+  .inner-marker {
+	&.blue {
+		.content {
+			background-position: 0 0;
+		}
+		.rocket-left {
+			background-position: 0 -46px;
+		}
+		.rocket-right {
+			background-position: -18px -46px;
+		}
+	}
+	&.purple {
+		.content {
+			background-position: -32px 0;
+		}
+		.rocket-left {
+			background-position: -32px -46px;
+		}
+		.rocket-right {
+			background-position: -50px -46px;
+		}
+	}
+	&.pink {
+		.content {
+			background-position: -64px 0;
+		}
+		.rocket-left {
+			background-position: -64px -46px;
+		}
+		.rocket-right {
+			background-position: -82px -46px;
+		}
+	}
+	&.red {
+		.content {
+			background-position: -96px 0;
+		}
+		.rocket-left {
+			background-position: -96px -46px;
+		}
+		.rocket-right {
+			background-position: -114px -46px;
+		}
+	}
+	&.orange {
+		.content {
+			background-position: -128px 0;
+		}
+		.rocket-left {
+			background-position: -128px -46px;
+		}
+		.rocket-right {
+			background-position: -146px -46px;
+		}
+	}
+	&.light-green {
+		.content {
+			background-position: -160px 0;
+		}
+		.rocket-left {
+			background-position: -160px -46px;
+		}
+		.rocket-right {
+			background-position: -178px -46px;
+		}
+	}
+	&.green {
+		.content {
+			background-position: -192px 0;
+		}
+		.rocket-left {
+			background-position: -192px -46px;
+		}
+		.rocket-right {
+			background-position: -210px -46px;
+		}
+	}
+  }
+
+}
+
+.marker-shadow {
+	display: none;
+}
+
+/* Retina displays */
+@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
+ .content, .rocket-right, .rocket-right, .rocket-shadow {
+  background-image: url('../images/markers@2x.png');
+  background-size: 450px 160px;
+ }
+}

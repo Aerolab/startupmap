@@ -1,0 +1,91 @@
+#modalCountrySelect {
+
+
+	position: absolute;
+	top: 0;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	z-index: 1001;
+	background: rgba(255,255,255,0.5);
+
+	.modal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -300px;
+		margin-top: -66px;
+		width: 600px;
+		// height: 132px;
+		padding: 20px;
+		background: white;
+		z-index: 1002;
+		white-space: nowrap;
+		transition: all 0.3s ease;
+		border-radius: 5px;
+		border: 2px solid #EBF7F8;
+
+		h3 {
+			margin: 0 0 20px 0;
+			color: #2496ef;
+			line-height: 1;
+			font-weight: normal;
+			font-size: 26px;
+			text-align: center;
+		}
+
+
+		.countryItem {
+			& i {
+				display: inline-block;
+				width: 19px;
+				height: 13px;
+				margin: 0 10px 0 0;
+				background: url(../images/flag-sprite.png) no-repeat;
+				background-position-x: left;
+			}
+
+			&.countryAR {
+				& i {
+					background-position-y: top;
+				}
+			}
+
+			&.countryUY {
+				& i {
+					background-position-y: -13px;
+				}
+			}
+
+			&.countryMX {
+				& i {
+					background-position-y: -26px;
+				}
+			}
+
+			&.countryBO {
+				& i {
+					background-position-y: -39px;
+				}
+			}
+
+			&.countryPE {
+				& i {
+					background-position-y: -52px;
+				}
+			}
+
+			&.countryCL {
+				& i {
+					background-position-y: -65px;
+				}
+			}
+
+			&.countryCO {
+				& i {
+					background-position-y: bottom;
+				}
+			}
+		}
+	}
+}

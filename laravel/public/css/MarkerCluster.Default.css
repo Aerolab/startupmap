@@ -1,0 +1,38 @@
+.marker-cluster-small div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4);
+	}
+
+.marker-cluster-medium div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4),
+				0px 0px 0px 36px rgba(36, 150, 239, 0.3),
+				0px 0px 0px 63px rgba(36, 150, 239, 0.2);
+	}
+
+.marker-cluster-large div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4),
+				0px 0px 0px 36px rgba(36, 150, 239, 0.3),
+				0px 0px 0px 63px rgba(36, 150, 239, 0.2),
+				0px 0px 0px 97px rgba(36, 150, 239, 0.1);
+	}
+
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	text-align: center;
+	border-radius: 15px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.marker-cluster span {
+	line-height: 30px;
+	}

@@ -1,0 +1,122 @@
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+	-webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+	-moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+	-o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+	transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+	}
+
+
+.marker-cluster-small div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4);
+	}
+
+.marker-cluster-medium div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4),
+				0px 0px 0px 36px rgba(36, 150, 239, 0.3),
+				0px 0px 0px 63px rgba(36, 150, 239, 0.2);
+	}
+
+.marker-cluster-large div {
+	background-color: rgb(46, 47, 51);
+	box-shadow: 0px 0px 0px 12px rgba(36, 150, 239, 0.4),
+				0px 0px 0px 36px rgba(36, 150, 239, 0.3),
+				0px 0px 0px 63px rgba(36, 150, 239, 0.2),
+				0px 0px 0px 97px rgba(36, 150, 239, 0.1);
+	}
+
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	text-align: center;
+	border-radius: 15px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.marker-cluster span {
+	line-height: 30px;
+	}
+
+
+/*
+Author: L. Voogdt
+License: MIT
+Version: 1.0
+*/
+
+/* Marker setup */
+.marker {
+  background: url('../images/markers.png') no-repeat 0 0;
+  width: 26px;
+  height: 44px;
+  position:absolute;
+  left:0;
+  top:0;
+  display: block;
+  text-align: center;
+}
+
+.marker-shadow {
+	display: none;
+}
+
+/* Retina displays */
+@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
+ .marker {
+  background-image: url('../images/markers-soft@2x.png');
+  background-size: 720px 46px;
+ }
+ .marker-shadow {
+  background-image: url('../images/markers-shadow@2x.png');
+  background-size: 35px 16px;
+ }
+}
+
+.marker i {
+  color: #333;
+  margin-top: -2px;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.marker .icon-white {
+  color: #fff;
+}
+
+/* Colors */
+.marker-icon-blue {
+  background-position: 0 0;
+}
+
+.marker-icon-purple {
+  background-position: -31px 0;
+}
+
+.marker-icon-pink {
+  background-position: -62px 0;
+}
+
+.marker-icon-red {
+  background-position: -93px 0;
+}
+
+.marker-icon-orange {
+  background-position: -124px 0;
+}
+
+.marker-icon-lightgreen {
+  background-position: -155px 0;
+}
+
+.marker-icon-darkgreen {
+  background-position: -186px 0;
+}
